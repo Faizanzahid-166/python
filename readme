@@ -1,0 +1,32 @@
+08_database/
+│
+├── todoList/
+│   ├── settings.py
+│   ├── urls.py
+│
+├── backend/
+│   ├── views.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── templates/
+│   │   └── todo/
+│   │       ├── create.html
+│   │       ├── list.html
+│
+├── manage.py
+
+1-CREATE VIRTUAL ENVIRNOMENT
+  python -m venv venv
+  venv\Scripts\activate
+
+2-START THE PROJET => 
+  django-admin startproject (project-name)
+
+3-CD clockproject => 
+  python manage.py startapp backend
+
+4-connect the database {migrate from projectname}
+  python manage.py makemigrations
+  python manage.py migrate
+
+final => python manage.py runserver

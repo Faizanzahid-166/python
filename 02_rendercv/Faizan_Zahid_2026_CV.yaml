@@ -1,0 +1,97 @@
+# pip install "rendercv[full]"
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+#  rendercv render Faizan_Zahid_2026_CV.yaml
+cv:
+  name: Muhammad Faizan Zahid
+  headline: Full Stack Developer | MERN Stack, Next.js, React.js
+  location: Pakistan
+  email: faizanzahid166@gmail.com
+  phone: "+92 3495526117"
+  website: https://marked-guts.vercel.app/
+  social_networks:
+    - network: LinkedIn
+      username: faizanzahid-9671942a6
+    - network: GitHub
+      username: Faizanzahid-166
+    - network: YouTube
+      username: ProgrammingHub-7107
+
+  sections:
+    Summary:
+      - Frontend & Full Stack Developer with expertise in React.js, Next.js, MERN Stack, and Laravel.
+      - Skilled in building responsive, high-performance web applications, REST APIs, and authentication modules.
+      - Strong problem-solving, team collaboration, and agile development experience.
+
+    Technical Skills:
+      - label: Frontend
+        details: React.js, Next.js, Vite, Tailwind CSS, HTML5, CSS3, JavaScript (ES6+), Redux, Context API
+      - label: Backend
+        details: Node.js, Express.js, PHP, Laravel
+      - label: Database
+        details: MongoDB, Mongoose, MySQL
+      - label: Tools & Concepts
+        details: REST APIs, Authentication, Deployment, Git, GitHub, Agile, Responsive Design, SEO Optimization
+
+    Experience:
+      - company: Appverse-Technologies
+        position: Frontend Intern
+        start_date: 2025
+        end_date: 2025
+        location: Remote
+        highlights:
+          - Built responsive and interactive UIs using React.js and Tailwind CSS.
+          - Optimized frontend rendering performance by 25%.
+          - Collaborated in agile teams, following scalable frontend practices.
+
+      - company: Dev-Technologies
+        position: MERN Stack Intern
+        start_date: 2025
+        end_date: 2025
+        location: Remote
+        highlights:
+          - Developed full-stack applications with MongoDB, Express.js, React.js, and Node.js.
+          - Built REST APIs, authentication modules, and CRUD operations.
+          - Enhanced backend scalability through efficient data modeling.
+
+      - company: Personal Projects
+        position: React.js Developer
+        start_date: 2024
+        end_date: present
+        location: GitHub
+        highlights:
+          - Created eCommerce demos, Weather Apps, Password Generators, and To-do Apps.
+          - Implemented state management using Redux and Context API.
+          - Focused on performance optimization, clean architecture, and code maintainability.
+
+    Education:
+      - label: Certificate
+        details: Nationwide IT Skillsets Expansion Program — Full Stack Web Development, Pakistan (2025)
+      - label: Certificate
+        details: NAVTTC Institute Islamabad — Blockchain Technology, Pakistan (2023)
+      - label: BS Computer Science
+        details: Federal Urdu University of Arts, Sciences & Technology (In Progress / Graduate)
+      - label: Intermediate
+        details: Government Higher Secondary School Dina — Pre-Engineering, Pakistan (2021)
+      - label: Matric
+        details: Government Higher Secondary School Dina — Science, Pakistan (2019)
+
+    Certifications:
+      - bullet: Frontend Internship – Appverse-Technologies (2025)
+      - bullet: Frontend Internship – Skillify Zone (2025)
+      - bullet: Full Stack Internship – Dev-Technologies (2025)
+      - bullet: Letter of Recommendation – Appverse-Technologies (2025)
+
+    Soft Skills:
+      - Problem Solving
+      - Team Collaboration
+      - Agile & Scrum Experience
+      - Communication & Adaptability
+
+design:
+  theme: classic
+
+locale:
+  language: english
+
+settings:
+  current_date: "2026-01-01"

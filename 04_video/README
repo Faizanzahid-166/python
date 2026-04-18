@@ -1,0 +1,15 @@
+05_video
+│
+└── venv
+├── upload
+│   └── videos
+│   └── images
+│      ├── img1.jpg
+│      ├── img2.jpg
+│      └── img3.jpg
+├── videoEditor
+│   └── combine-images.py
+│   └──trim-or-delete.py
+├── main.py
+
+cv2, moviepy
