@@ -13,26 +13,29 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import os
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECURITY
+SECRET_KEY = os.environ.get("SECRET_KEY")
+# SECURITY WARNING: keep the secret key used in production secret!
+
+
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+ALLOWED_HOSTS = ['*']
+
+# Allow all hosts during development, but specify allowed hosts in production
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x%irgh8h@n&kb3=df!hybpbu32)jf52pfwg1g2&l6nof63y9#*'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,7 +83,7 @@ WSGI_APPLICATION = 'todoList.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
 
     # Using SQLite (default)
     # 'default': {
@@ -90,15 +93,15 @@ DATABASES = {
 
     # Using PostgreSQL
 
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo',
-        'USER': 'postgres',
-        'PASSWORD': 'faizanzahid7107',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'todo',
+#         'USER': 'postgres',
+#         'PASSWORD': 'faizanzahid7107',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 
 

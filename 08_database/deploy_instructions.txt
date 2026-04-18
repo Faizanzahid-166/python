@@ -1,6 +1,14 @@
 // add these to deploy the project to render build and start command
 pip install -r requirements.txt
-web: gunicorn todoList.wsgi (alternate) cd todoList && gunicorn todoList.wsgi
+
+when u used root and start
+08_database/todoList
+cd todoList && gunicorn todoList.wsgi
+web: gunicorn todoList.wsgi
+
+when u used root and start
+08_database
+gunicorn todoList.wsgi:application
 
 
 
