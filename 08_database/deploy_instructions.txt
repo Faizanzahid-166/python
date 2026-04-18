@@ -5,3 +5,6 @@ web: gunicorn todoList.wsgi
 
 // requirements.txt
 pip freeze > requirements.txt 
+
+// what should we install
+pip install dj-database-url   
