@@ -1,0 +1,32 @@
+randomProject/
+│
+├── router/
+│   ├── settings.py   # here we can see the dependencies
+│   ├── urls.py       # here we backend logic
+│
+├── randomProject/
+│   ├── views.py      # here we make urls after the backend logic
+│
+├── templates/
+│   └── clock.html
+│
+└── manage.py
+
+1-CREATE VIRTUAL ENVIRNOMENT
+2-START THE PROJET => django-admin startproject (name of project)
+3-CD clockproject => python manage.py startapp backend
+
+final => python manage.py runserver
+
+1 Clock
+2 Greeting App
+3 Calculator
+4 Random Quote
+5 Todo List
+  │
+  └── pip install psycopg2-binary
+6 Blog
+7 Contact Form
+8 Image Gallery
+9 Weather API
+10 Login System

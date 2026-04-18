@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Django Clock</title>
+</head>
+
+<body>
+
+    <h1>Digital Clock</h1>
+    <h2 id="clock">{{ time }}</h2>
+
+    <div>
+        <button onclick="changeColor('red')">Red</button>
+        <button onclick="changeColor('blue')">Blue</button>
+        <button onclick="changeColor('green')">Green</button>
+         <button onclick="changeColor('yellow')">Yellow</button>
+        <button onclick="changeColor('purple')">Purple</button>
+        <button onclick="changeColor('olive')">Olive</button>
+        <button onclick="changeColor('orange')">Orange</button>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById("clock").innerHTML =
+                now.toLocaleTimeString();
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        function changeColor(color){
+    document.body.style.backgroundColor = color;
+}
+
+    </script>
+
+</body>
+
+</html>

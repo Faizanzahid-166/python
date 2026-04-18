@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+</head>
+
+<body style="text-align:center; font-family:Arial;">
+  
+
+<h1>Simple Calculator</h1>
+
+<form method="POST">
+{% csrf_token %}
+
+<input type="number" name="num1" placeholder="First number" required>
+<br><br>
+
+<input type="number" name="num2" placeholder="Second number" required>
+<br><br>
+
+<select name="operation">
+    <option value="add">Add (+)</option>
+    <option value="sub">Subtract (-)</option>
+    <option value="mul">Multiply (*)</option>
+    <option value="div">Divide (/)</option>
+</select>
+
+<br><br>
+
+<button type="submit">Calculate</button>
+
+</form>
+
+<h2>Result: {{ result }}</h2>
+
+<section >
+    <h3>What You Learned</h3>
+
+    <ul>
+        <li>Handling form data (POST)</li>
+        <li>Doing calculations in Python</li>
+        <li>Sending result to HTML template</li>
+    </ul>
+</section>
+
+</body>
+</html>

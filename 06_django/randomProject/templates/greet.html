@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Greeting App</title>
+</head>
+
+<body style="text-align:center; font-family:Arial;">
+
+<h1>Greeting App</h1>
+
+<form method="POST">
+{% csrf_token %}
+
+<input type="text" name="name" placeholder="Enter your name">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<h2>Hello {{ name }}</h2>
+
+</body>
+</html>
