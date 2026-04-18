@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Django stuff
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Static & media (if generated)
+staticfiles/
+media/
+
+# Environment variables (important)
+.env
+
+# VS Code / IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migrations (optional — depends on team)
+# */migrations/__pycache__/
+
+
+# | What you want to ignore | Add this       |
+# | ----------------------- | -------------- |
+# | Folder                  | `folder_name/` |
+# | File                    | `file.txt`     |
+# | All `.log` files        | `*.log`        |
+# | All `__pycache__`       | `__pycache__/` |

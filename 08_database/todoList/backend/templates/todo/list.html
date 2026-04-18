@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="max-w-2xl mx-auto mt-10 bg-white shadow-lg rounded-xl p-6">
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+            📝 Todo List
+        </h1>
+
+        <!-- Add Button -->
+        <div class="flex justify-end mb-4">
+            <a href="/todo/create/" 
+               class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow">
+                + Add Todo
+            </a>
+        </div>
+
+        <!-- Todo List -->
+        <ul class="space-y-3">
+            {% for todo in todos %}
+                <li class="flex justify-between items-center bg-gray-50 p-4 rounded-lg shadow-sm">
+
+                    <!-- Todo Info -->
+                    <div>
+                        <p class="text-lg font-medium text-gray-700">
+                            Title:   {{ todo.title }}
+                        </p>
+
+                         <p class="text-lg font-medium text-gray-700">
+                            Detail: {{ todo.description }}
+                        </p>
+
+                        <span class="text-sm 
+                            {% if todo.completed %}
+                                text-green-600
+                            {% else %}
+                                text-red-500
+                            {% endif %}">
+                            
+                            {% if todo.completed %}
+                                ✔ Completed
+                            {% else %}
+                                ✘ Not Completed
+                            {% endif %}
+                        </span>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="space-x-2">
+                        <a href="/todo/update/{{ todo.id }}/"
+                           class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded">
+                            Edit
+                        </a>
+
+                        <a href="/todo/delete/{{ todo.id }}/"
+                           class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">
+                            Delete
+                        </a>
+                    </div>
+
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+</body>
+</html>

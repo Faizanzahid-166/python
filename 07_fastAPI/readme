@@ -1,0 +1,3 @@
+CTRL + C  --run command and run from 
+(venv) PS D:\07_code_2025\12_python\basic_start\07_fastAPI> 
+uvicorn app.main:app --reload 
