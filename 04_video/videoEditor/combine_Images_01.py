@@ -44,7 +44,7 @@ import sys
 def run_combination():
     # Look one level up from videoEditor into upload/images
     image_folder = os.path.join(os.getcwd(), "upload", "images")
-    output_file = "video.mp4"
+    output_file = "download/audios/01_video.mp4"
 
     if not os.path.exists(image_folder):
         print(f"Error: Folder not found at {image_folder}")

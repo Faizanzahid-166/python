@@ -3,9 +3,11 @@ import subprocess
 import os
 import sys
 from videoEditor.trim_or_delete_02 import remove_first_25_seconds
+from videoEditor.extract_audio_to_video import extract_audio
 
 
-# Example usage of the combibe_images function
+# 1-Example usage of the combibe_images function
+
 # def main():
 #     print("--- Video Automation Tool ---")
     
@@ -32,26 +34,33 @@ from videoEditor.trim_or_delete_02 import remove_first_25_seconds
 #         print(e.stderr)
 
 
-# Example usage of the trim_or_delete function 
-def main():
-    print("🎧 Media Tool")
-    print("1. Remove first 25 seconds from audio")
+# 2-Example usage of the trim_or_delete function 
+# def main():
+#     print("🎧 Media Tool")
+#     print("1. Remove first 25 seconds from audio")
     
-    choice = input("Enter choice: ")
+#     choice = input("Enter choice: ")
 
-    if choice == "1":
-        input_file = input("Enter input file path: ").strip() 
-        output_file = input("Enter output file path: ").strip()
+#     if choice == "1":
+#         input_file = input("Enter input file path: ").strip() 
+#         output_file = input("Enter output file path: ").strip()
 
-        if not input_file or not output_file:
-            print("❌ Please provide valid paths")
-            return
+#         if not input_file or not output_file:
+#             print("❌ Please provide valid paths")
+#             return
 
-        result = remove_first_25_seconds(input_file, output_file)
-        print(result)
-#  upload/audios/Never_Be_The_Same.mp3
-    else:
-        print("❌ Invalid choice")
+#         result = remove_first_25_seconds(input_file, output_file)
+#         print(result)
+# #  upload/audios/Never_Be_The_Same.mp3
+#     else:
+#         print("❌ Invalid choice")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+# 3-Example usage of the extract_audio function
+# input video file
+input_video = "upload/videos/ttt.mp4"
+
+# call function
+extract_audio(input_video, "downloads/audios/01_audio.mp3")

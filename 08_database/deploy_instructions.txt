@@ -8,6 +8,7 @@ web: gunicorn todoList.wsgi
 
 when u used root and start
 08_database
+python manage.py migrate && gunicorn todoList.wsgi:application --bind 0.0.0.0:$PORT
 gunicorn todoList.wsgi:application
 
 
