@@ -3,7 +3,7 @@ import subprocess
 import os
 import sys
 from videoEditor.trim_or_delete_02 import remove_first_25_seconds
-from videoEditor.extract_audio_to_video import extract_audio
+from videoEditor.extract_audio_to_video_03 import extract_audio
 
 
 # 1-Example usage of the combibe_images function

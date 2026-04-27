@@ -12,4 +12,7 @@
 │   └──trim-or-delete.py
 ├── main.py
 
-cv2, moviepy
+rm -r venv
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
