@@ -90,3 +90,5 @@ def mute_audio(input_video: str, output_path: str) -> str:
 
     subprocess.run(cmd, check=True, capture_output=True)
     return f"Audio muted: {output_path}"
+
+    # python main.py extract-audio -i media/input/videos/sample.mp4 -o media/output/audio.mp3

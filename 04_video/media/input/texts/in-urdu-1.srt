@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:05,000
+ Yes, I will come tomorrow, yes, I will come the day after tomorrow, yes, I will come the day after tomorrow.
+
+2
+00:00:05,000 --> 00:00:10,000
+ What is the date today, what is the date tomorrow and what will be the date the day after tomorrow?
+
+3
+00:00:10,000 --> 00:00:14,000
+ Now what are you going to do? Tell me something too.
+
+4
+00:00:14,000 --> 00:00:20,000
+ And if you have prepared for the test, then tell me a little bit too.
+

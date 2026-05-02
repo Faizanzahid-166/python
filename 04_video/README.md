@@ -42,7 +42,7 @@ python main.py replace-audio -i video.mp4 -a new_audio.mp3 -o output.mp4
 python main.py images-to-video -f media/input/images -o slideshow.mp4 --duration 2
 
 # Text-to-speech
-python main.py text-to-speech -i media/input/texts/script.otxt -o speech.mp3 --voice en-US-JennyNeural
+python main.py srt-to-audio -i .\media\input\texts\test.wav.srt -o .\media\output\audios\audio.mp3  --voice en-US-JennyNeural
 python main.py srt-to-audio -i media/input/texts/subs.srt -o audio.mp3
 ```
 
@@ -75,3 +75,19 @@ Popular voices:
 ├── main.py             # CLI entry point
 └── requirements.txt
 ```
+# rm -r venv
+# python -m venv venv
+# venv\Scripts\activate
+# pip freeze > requirements.txt
+# pip install -r requirements.txt
+
+# load .env variables
+# pip install python-dotenv
+
+# for video editing, we will use ffmpeg command line tool, which can be installed from https://ffmpeg.org/download.html
+# pip install moviepy numpy 
+
+# for text to speech, we will use edge-tts, which is a python wrapper for Microsoft Edge's text-to-speech API. It can be installed from https://pypi.org/project/edge-tts/
+#  pip install srt
+#  pip install edge-tts 
+#  pip install pydub  

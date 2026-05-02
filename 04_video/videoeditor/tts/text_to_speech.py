@@ -41,3 +41,5 @@ async def _generate_speech(
     """Async helper to generate speech."""
     communicate = edge_tts.Communicate(text, voice)
     await communicate.save(output_path)
+
+# python main.py srt-to-audio -i .\media\input\texts\test.wav.srt -o .\media\output\audios\audio.mp3  --voice en-US-JennyNeural
