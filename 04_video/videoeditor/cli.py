@@ -11,7 +11,8 @@ from .core import (
     images_to_video, add_audio_to_video, replace_audio
 )
 from .tts import text_to_speech, subtitle_to_speech
-
+from videoeditor.core.filters import apply_filter, youtube_shorts_filter, youtube_long_filter
+from videoeditor.core.speed import change_speed
 
 def create_parser() -> argparse.ArgumentParser:
     """Create argument parser with all commands."""
@@ -149,3 +150,136 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     return run_command(args)
+
+def main():
+
+    parser = argparse.ArgumentParser(
+        description="Video Editor Toolkit"
+    )
+
+    subparsers = parser.add_subparsers(dest="command")
+
+    # ---------------- FILTER ----------------
+
+    filter_parser = subparsers.add_parser(
+        "filter",
+        help="Apply video filters"
+    )
+
+    filter_parser.add_argument("-i", "--input", required=True)
+    filter_parser.add_argument("-o", "--output", required=True)
+
+    filter_parser.add_argument("--brightness", type=float)
+    filter_parser.add_argument("--contrast", type=float)
+    filter_parser.add_argument("--blur", type=float)
+    filter_parser.add_argument("--sharpen", type=float)
+
+    filter_parser.add_argument(
+        "--grayscale",
+        action="store_true"
+    )
+
+    filter_parser.add_argument(
+        "--coding-mode",
+        action="store_true"
+    )
+
+# Shorts Command
+    shorts_parser = subparsers.add_parser(
+    "youtube-shorts"
+    )
+
+    shorts_parser.add_argument(
+        "-i", "--input",
+        required=True
+    )
+
+    shorts_parser.add_argument(
+        "-o", "--output",
+        required=True
+    )
+
+    # Long Video Command
+    long_parser = subparsers.add_parser(
+        "youtube-long"
+    )
+
+    long_parser.add_argument(
+        "-i", "--input",
+        required=True
+    )
+
+    long_parser.add_argument(
+        "-o", "--output",
+        required=True
+    )
+    # ---------------- SPEED ----------------
+
+    speed_parser = subparsers.add_parser(
+        "speed",
+        help="Change video playback speed"
+    )
+
+    speed_parser.add_argument("-i", "--input", required=True)
+    speed_parser.add_argument("-o", "--output", required=True)
+
+    speed_parser.add_argument(
+        "--rate",
+        type=float,
+        required=True
+    )
+
+    # ---------------- EXECUTE ----------------
+
+    args = parser.parse_args()
+
+    if args.command == "filter":
+
+        if args.coding_mode:
+
+            apply_filter(
+                input_file=args.input,
+                output_file=args.output,
+                brightness=0.03,
+                contrast=1.15,
+                sharpen=1.5
+            )
+
+        else:
+
+            apply_filter(
+                input_file=args.input,
+                output_file=args.output,
+                brightness=args.brightness,
+                contrast=args.contrast,
+                blur=args.blur,
+                sharpen=args.sharpen,
+                grayscale=args.grayscale
+            )
+
+    elif args.command == "youtube-shorts":
+
+        youtube_shorts_filter(
+            input_file=args.input,
+            output_file=args.output
+        )
+
+    elif args.command == "youtube-long":
+
+        youtube_long_filter(
+            input_file=args.input,
+            output_file=args.output
+        )
+
+    elif args.command == "speed":
+
+        change_speed(
+            input_file=args.input,
+            output_file=args.output,
+            speed=args.rate
+        )
+
+    else:
+        parser.print_help()
+
+    return 0
